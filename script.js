@@ -1,33 +1,48 @@
-const nav = document.querySelector(".nav");
 const menu = document.querySelector(".menu");
+const nav = document.querySelector(".nav nav");
+
+// =========================
+// Mobile Navigation
+// =========================
 
 menu?.addEventListener("click", () => {
-  const navLinks = nav.querySelector("nav");
+  const open = nav.classList.toggle("open");
 
-  const visible = navLinks.style.display === "flex";
-
-  navLinks.style.display = visible ? "" : "flex";
-  navLinks.style.position = "absolute";
-  navLinks.style.top = "76px";
-  navLinks.style.left = "0";
-  navLinks.style.right = "0";
-  navLinks.style.padding = "24px 6vw";
-  navLinks.style.background = "#f5f3ee";
-  navLinks.style.flexDirection = "column";
-  navLinks.style.borderBottom = "1px solid #dcdad2";
+  if (open) {
+    nav.style.display = "flex";
+    nav.style.position = "absolute";
+    nav.style.top = "76px";
+    nav.style.left = "0";
+    nav.style.right = "0";
+    nav.style.padding = "24px 6vw";
+    nav.style.background = "#f5f3ee";
+    nav.style.flexDirection = "column";
+    nav.style.borderBottom = "1px solid #dddcd5";
+  } else {
+    nav.removeAttribute("style");
+  }
 });
 
 
-// Scroll reveal animation
+// =========================
+// Scroll Reveal Animation
+// =========================
 
-const observer = new IntersectionObserver(
+const reveal = new IntersectionObserver(
   (entries) => {
+
     entries.forEach((entry) => {
+
       if (entry.isIntersecting) {
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
+
+        entry.target.classList.add("visible");
+
+        reveal.unobserve(entry.target);
+
       }
+
     });
+
   },
   {
     threshold: 0.12
@@ -35,20 +50,42 @@ const observer = new IntersectionObserver(
 );
 
 
-// Elements that animate when they enter the viewport
+// Elements to animate
 
 document
   .querySelectorAll(
-    ".impact-card, .audience-card, .trust-item, .proof-card"
+    ".ai-card, .outcomes div, .audience-card, .trust-list div, .eco-node"
   )
-  .forEach((el) => {
+  .forEach((element) => {
 
-    el.style.opacity = "0";
+    element.classList.add("reveal");
 
-    el.style.transform = "translateY(22px)";
+    reveal.observe(element);
 
-    el.style.transition =
-      "opacity .7s ease, transform .7s ease";
-
-    observer.observe(el);
   });
+
+
+// =========================
+// Animation Styles
+// =========================
+
+const style = document.createElement("style");
+
+style.textContent = `
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+`;
+
+document.head.appendChild(style);
