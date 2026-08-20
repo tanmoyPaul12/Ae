@@ -11,6 +11,49 @@ document.querySelectorAll(".mobile-menu a").forEach((link) => {
   });
 });
 
+// Property Slider Controls
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+const propertySlider = document.getElementById("propertySlider");
+
+prevBtn?.addEventListener("click", () => {
+  propertySlider?.scrollBy({ left: -380, behavior: "smooth" });
+});
+
+nextBtn?.addEventListener("click", () => {
+  propertySlider?.scrollBy({ left: 380, behavior: "smooth" });
+});
+
+// Category Tab Filtering for "All Your Real Estate Needs" section
+const tabBtns = document.querySelectorAll(".tab-btn");
+const needCards = document.querySelectorAll(".need-card");
+
+tabBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    tabBtns.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filter = btn.getAttribute("data-filter");
+
+    needCards.forEach((card) => {
+      const category = card.getAttribute("data-category");
+      if (filter === "all" || category === filter) {
+        card.style.display = "flex";
+        setTimeout(() => {
+          card.style.opacity = "1";
+          card.style.transform = "translateY(0)";
+        }, 50);
+      } else {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(15px)";
+        setTimeout(() => {
+          card.style.display = "none";
+        }, 200);
+      }
+    });
+  });
+});
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -22,12 +65,14 @@ const observer = new IntersectionObserver((entries) => {
 
 const revealStyle = document.createElement("style");
 revealStyle.textContent = `
-  .quick-card,
-  .property-card,
+  .leader-stat-card,
+  .listing-card,
   .journey-item,
+  .need-card,
+  .process-step-card,
+  .direct-comm-card,
   .audience,
-  .impact-list > div,
-  .trust-right > div {
+  .outcome-card {
     opacity: 0;
     transform: translateY(22px);
     transition: opacity .65s ease, transform .65s ease;
@@ -39,12 +84,14 @@ revealStyle.textContent = `
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .quick-card,
-    .property-card,
+    .leader-stat-card,
+    .listing-card,
     .journey-item,
+    .need-card,
+    .process-step-card,
+    .direct-comm-card,
     .audience,
-    .impact-list > div,
-    .trust-right > div {
+    .outcome-card {
       opacity: 1;
       transform: none;
       transition: none;
@@ -54,7 +101,7 @@ revealStyle.textContent = `
 document.head.appendChild(revealStyle);
 
 document.querySelectorAll(
-  ".quick-card, .property-card, .journey-item, .audience, .impact-list > div, .trust-right > div"
+  ".leader-stat-card, .listing-card, .journey-item, .need-card, .process-step-card, .direct-comm-card, .audience, .outcome-card"
 ).forEach((element) => observer.observe(element));
 
 window.addEventListener("scroll", () => {

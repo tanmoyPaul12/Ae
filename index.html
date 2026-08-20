@@ -18,6 +18,7 @@
 
   <nav class="desktop-nav">
     <a href="#properties">Properties</a>
+    <a href="#services">Services</a>
     <a href="#solutions">Solutions</a>
     <a href="#why">Why ApniEstate</a>
     <a href="#about">About</a>
@@ -31,6 +32,7 @@
 
 <div class="mobile-menu">
   <a href="#properties">Properties</a>
+  <a href="#services">Services</a>
   <a href="#solutions">Solutions</a>
   <a href="#why">Why ApniEstate</a>
   <a href="#about">About</a>
@@ -56,6 +58,7 @@
 
   <div class="hero-right">
     <div class="hero-photo">
+      <img src="interior_living.png" alt="ApniEstate Modern Interior" class="hero-bg-img">
       <div class="photo-overlay"></div>
       <div class="hero-label label-a"><small>SMARTER</small><b>DECISIONS</b></div>
       <div class="hero-label label-b"><small>REAL ESTATE</small><b>CONNECTED</b></div>
@@ -65,35 +68,272 @@
   </div>
 </section>
 
-<section class="quick section">
-  <div class="quick-card"><span>01</span><b>CLARITY</b><small>Know what matters.</small></div>
-  <div class="quick-card"><span>02</span><b>TRANSPARENCY</b><small>See the full picture.</small></div>
-  <div class="quick-card"><span>03</span><b>EFFICIENCY</b><small>Move with less friction.</small></div>
-  <div class="quick-card"><span>04</span><b>GROWTH</b><small>Turn insight into opportunity.</small></div>
+<!-- TRUSTED BY INDUSTRY LEADERS SECTION -->
+<section class="trust-leaders-section section">
+  <div class="section-header-center">
+    <h2>Empowering Real Estate <span class="highlight-text">Pioneers</span></h2>
+    <p class="section-subtitle">Connecting developers, investors, and homebuyers with AI-driven intelligence and verified market clarity.</p>
+  </div>
+
+  <div class="trust-stats-grid">
+    <div class="leader-stat-card">
+      <div class="leader-icon-box">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+      </div>
+      <div class="leader-stat-num">250+</div>
+      <div class="leader-stat-lbl">Verified Partners</div>
+    </div>
+
+    <div class="leader-stat-card">
+      <div class="leader-icon-box">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+      </div>
+      <div class="leader-stat-num">4.9★</div>
+      <div class="leader-stat-lbl">Client Satisfaction</div>
+    </div>
+
+    <div class="leader-stat-card">
+      <div class="leader-icon-box">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      </div>
+      <div class="leader-stat-num">10K+</div>
+      <div class="leader-stat-lbl">Curated Listings</div>
+    </div>
+
+    <div class="leader-stat-card">
+      <div class="leader-icon-box">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+      </div>
+      <div class="leader-stat-num">99%</div>
+      <div class="leader-stat-lbl">Execution Precision</div>
+    </div>
+  </div>
 </section>
 
 <section class="properties section" id="properties">
-  <div class="section-top">
+  <div class="section-top property-section-top">
     <div>
-      <div class="eyebrow">01 / REAL ESTATE</div>
-      <h2>Everything you need<br>to move <em>forward.</em></h2>
+      <div class="eyebrow">01 / FEATURED PROPERTIES</div>
+      <h2>Featured Properties<br><em>Scroll one by one.</em></h2>
     </div>
-    <a href="#" class="simple-link">Explore properties ↗</a>
   </div>
 
-  <div class="property-grid">
-    <article class="property-card large">
-      <div class="property-image image-one"></div>
-      <div class="property-info"><div><span>RESIDENTIAL</span><h3>Modern living, thoughtfully connected.</h3></div><b>↗</b></div>
-    </article>
-    <article class="property-card">
-      <div class="property-image image-two"></div>
-      <div class="property-info"><div><span>INVESTMENT</span><h3>See opportunity differently.</h3></div><b>↗</b></div>
-    </article>
-    <article class="property-card">
-      <div class="property-image image-three"></div>
-      <div class="property-info"><div><span>DEVELOPMENT</span><h3>Build with better intelligence.</h3></div><b>↗</b></div>
-    </article>
+  <div class="property-slider-wrapper">
+    <div class="property-slider-track" id="propertySlider">
+      <!-- Property Card 1 -->
+      <article class="listing-card slider-card">
+        <div class="listing-image-wrapper">
+          <img src="modern_apartment.png" alt="Modern 3BHK Apartment">
+        </div>
+        <div class="listing-content">
+          <h3 class="listing-title">Modern 3BHK Apartment</h3>
+          <div class="listing-price-row"><strong class="price-highlight">₹85 Lac</strong></div>
+          <div class="listing-location">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Agartala, Tripura
+          </div>
+          <div class="listing-specs">
+            <span>3 Beds</span> • <span>2 Baths</span> • <span>1,450 sq.ft</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Property Card 2 -->
+      <article class="listing-card slider-card">
+        <div class="listing-image-wrapper">
+          <img src="villa_pool.png" alt="Premium 2BHK Flat">
+        </div>
+        <div class="listing-content">
+          <h3 class="listing-title">Premium 2BHK Flat</h3>
+          <div class="listing-price-row"><strong class="price-highlight rent-price">₹18K/mo</strong></div>
+          <div class="listing-location">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Ramnagar, Tripura
+          </div>
+          <div class="listing-specs">
+            <span>2 Beds</span> • <span>2 Baths</span> • <span>980 sq.ft</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Property Card 3 -->
+      <article class="listing-card slider-card">
+        <div class="listing-image-wrapper">
+          <img src="interior_living.png" alt="Luxury Villa with Garden">
+        </div>
+        <div class="listing-content">
+          <h3 class="listing-title">Luxury Villa with Garden</h3>
+          <div class="listing-price-row"><strong class="price-highlight">₹1.2 Cr</strong></div>
+          <div class="listing-location">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Udaipur, Tripura
+          </div>
+          <div class="listing-specs">
+            <span>4 Beds</span> • <span>3 Baths</span> • <span>2,200 sq.ft</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ALL YOUR REAL ESTATE NEEDS IN ONE PLACE SECTION -->
+<section class="needs-section section" id="services">
+  <div class="needs-outer-container">
+    <div class="section-header-center">
+      <div class="eyebrow">02 / ALL-IN-ONE PLATFORM</div>
+      <h2>All Your <span class="highlight-text">Real Estate</span> Needs In One Place</h2>
+      <p class="section-subtitle">Everything from property search to legal, finance, and construction — structured for instant clarity.</p>
+    </div>
+
+    <div class="needs-tabs">
+      <button class="tab-btn active" data-filter="all">All Services</button>
+      <button class="tab-btn" data-filter="property">Property & Finance</button>
+      <button class="tab-btn" data-filter="design">Design & Build</button>
+      <button class="tab-btn" data-filter="supplies">Supplies & Workforce</button>
+    </div>
+
+    <!-- Mobile swipe indicator -->
+    <div class="swipe-hint">
+      <span>Swipe left / right to explore services →</span>
+    </div>
+
+    <div class="needs-grid">
+      <div class="need-card" data-category="property">
+        <div class="need-badge">DIRECT LISTINGS</div>
+        <h3>Buy</h3>
+        <p>Direct verified listings with transparent pricing & end-to-end support.</p>
+        <div class="need-footer"><span>0% Hidden Fees</span><b>Explore →</b></div>
+      </div>
+
+      <div class="need-card" data-category="property">
+        <div class="need-badge">INSTANT LEASE</div>
+        <h3>Rent</h3>
+        <p>Curated residential & commercial spaces with digital agreement support.</p>
+        <div class="need-footer"><span>Verified Owners</span><b>Browse →</b></div>
+      </div>
+
+      <div class="need-card" data-category="design">
+        <div class="need-badge">TURNKEY PROJECT</div>
+        <h3>Construction Services</h3>
+        <p>End-to-end architectural planning, structural approvals & site execution.</p>
+        <div class="need-footer"><span>Architect Guided</span><b>Consult →</b></div>
+      </div>
+
+      <div class="need-card" data-category="design">
+        <div class="need-badge">3D CONCEPTS</div>
+        <h3>Interior Designing</h3>
+        <p>Tailored interior layouts, spatial planning & bespoke aesthetic finishing.</p>
+        <div class="need-footer"><span>Custom Renders</span><b>Design →</b></div>
+      </div>
+
+      <div class="need-card" data-category="property">
+        <div class="need-badge">RERA AUDIT</div>
+        <h3>Legal Service</h3>
+        <p>Property title verification, agreement drafting & contract compliance.</p>
+        <div class="need-footer"><span>Legal Experts</span><b>Verify →</b></div>
+      </div>
+
+      <div class="need-card" data-category="design">
+        <div class="need-badge">BALANCED LIVING</div>
+        <h3>Vastu</h3>
+        <p>Certified Vastu advisory to ensure harmonious spatial alignment & energy flow.</p>
+        <div class="need-footer"><span>Expert Analysis</span><b>Get Plan →</b></div>
+      </div>
+
+      <div class="need-card" data-category="property">
+        <div class="need-badge">PRE-APPROVED</div>
+        <h3>Home Loan</h3>
+        <p>Instant bank eligibility checks, lowest interest rates & fast disbursement.</p>
+        <div class="need-footer"><span>Multiple Banks</span><b>Calculate →</b></div>
+      </div>
+
+      <div class="need-card" data-category="supplies">
+        <div class="need-badge">WHOLESALE DIRECT</div>
+        <h3>Construction Materials</h3>
+        <p>High-grade cement, steel & raw building materials directly to your site.</p>
+        <div class="need-footer"><span>Bulk Rates</span><b>Order →</b></div>
+      </div>
+
+      <div class="need-card" data-category="supplies">
+        <div class="need-badge">MODULAR & CUSTOM</div>
+        <h3>Furniture</h3>
+        <p>Space-efficient modular furniture crafted for durability & modern aesthetic.</p>
+        <div class="need-footer"><span>Factory Direct</span><b>View →</b></div>
+      </div>
+
+      <div class="need-card" data-category="supplies">
+        <div class="need-badge">CURATED ACCENTS</div>
+        <h3>Decoratives</h3>
+        <p>Designer lighting solutions, wall accents & premium living spaces decor.</p>
+        <div class="need-footer"><span>Luxury Styling</span><b>Explore →</b></div>
+      </div>
+
+      <div class="need-card" data-category="supplies">
+        <div class="need-badge">CERTIFIED FITTINGS</div>
+        <h3>Hardware & Sanitary</h3>
+        <p>Smart locks, luxury bath fixtures, plumbing & premium security hardware.</p>
+        <div class="need-footer"><span>Top Brands</span><b>Catalog →</b></div>
+      </div>
+
+      <div class="need-card" data-category="supplies">
+        <div class="need-badge">VERIFIED CREW</div>
+        <h3>Manpower</h3>
+        <p>Certified masons, electricians, plumbers & experienced site supervisors.</p>
+        <div class="need-footer"><span>On-Demand</span><b>Hire Crew →</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS SECTION (BASED ON REFERENCE DESIGN) -->
+<section class="how-it-works section" id="how-it-works">
+  <div class="section-header-center">
+    <div class="simple-process-pill">SIMPLE PROCESS</div>
+    <h2>How It <span class="highlight-text">Works</span></h2>
+    <p class="section-subtitle">Finding your perfect property is easy with our <strong>AI-powered</strong> three-step process</p>
+  </div>
+
+  <div class="process-metrics-bar">
+    <div class="metric-pill"><span>⭐</span> <b>4.9</b> Rating</div>
+    <div class="metric-pill"><span>✓</span> <b>99%</b> Success Rate</div>
+    <div class="metric-pill"><span>⚡</span> <b>&lt; 24h</b> Avg. Response</div>
+  </div>
+
+  <div class="how-process-track">
+    <div class="process-step-card">
+      <div class="step-num-badge">1</div>
+      <div class="step-icon-box">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </div>
+      <h3>Find Your Property</h3>
+      <p>Use our AI-powered search to discover properties matching your exact needs. Filter by location, price, amenities and more.</p>
+      <div class="step-check-badge">✓</div>
+    </div>
+
+    <div class="process-connector"></div>
+
+    <div class="process-step-card">
+      <div class="step-num-badge">2</div>
+      <div class="step-icon-box">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      </div>
+      <h3>Schedule a Visit</h3>
+      <p>Book an in-person viewing or take a virtual 3D tour of your selected properties at your convenience.</p>
+      <div class="step-check-badge">✓</div>
+    </div>
+
+    <div class="process-connector"></div>
+
+    <div class="process-step-card">
+      <div class="step-num-badge">3</div>
+      <div class="step-icon-box">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+      </div>
+      <h3>Close the Deal</h3>
+      <p>Complete paperwork digitally, get expert guidance from our agents, and secure your dream property with ease.</p>
+      <div class="step-check-badge">✓</div>
+    </div>
   </div>
 </section>
 
@@ -108,7 +348,7 @@
   </div>
 
   <div class="vision-copy">
-    <div class="eyebrow">02 / THE BIGGER PICTURE</div>
+    <div class="eyebrow">03 / THE BIGGER PICTURE</div>
     <h2>Real estate is more than a property.<br><em>It's a decision.</em></h2>
     <p>Every decision brings data, people, capital and complexity together. ApniEstate connects them through technology so the path from information to action becomes simpler.</p>
     <div class="mini-flow">
@@ -120,18 +360,43 @@
 <section class="why section" id="why">
   <div class="section-top">
     <div>
-      <div class="eyebrow">03 / WHY APNIESTATE</div>
+      <div class="eyebrow">04 / WHY APNIESTATE</div>
       <h2>Technology that works<br><em>behind the decision.</em></h2>
     </div>
     <p class="section-note">AI across the real-estate journey — without adding more complexity.</p>
   </div>
 
-  <div class="journey">
-    <div class="journey-item"><span>01</span><b>DISCOVER</b><small>Find what matters.</small></div>
-    <div class="journey-item"><span>02</span><b>UNDERSTAND</b><small>Make sense of information.</small></div>
-    <div class="journey-item"><span>03</span><b>DECIDE</b><small>Move with confidence.</small></div>
-    <div class="journey-item"><span>04</span><b>BUILD</b><small>Plan with clarity.</small></div>
-    <div class="journey-item"><span>05</span><b>MANAGE</b><small>Operate smarter.</small></div>
+  <div class="why-container">
+    <!-- Direct Communication Hero Banner -->
+    <div class="direct-comm-card">
+      <div class="direct-comm-left">
+        <div class="comm-status"><span class="pulse-dot"></span> REAL-TIME CHAT ACTIVE</div>
+        <h3>Direct Communication</h3>
+        <p>Get instant responses from our experienced agents through our real-time chat system.</p>
+      </div>
+      <div class="direct-comm-right">
+        <a class="primary-btn" href="#contact">Start Instant Chat <b>↗</b></a>
+      </div>
+    </div>
+
+    <!-- 3 Pillars Grid: 01 Verified Properties, 02 Quality First, 03 Family Focused -->
+    <div class="why-pillars-grid">
+      <div class="journey-item pillar-card">
+        <span class="pillar-num">01</span>
+        <b>Verified Properties</b>
+        <small>Every property is thoroughly inspected and verified to ensure quality and authenticity.</small>
+      </div>
+      <div class="journey-item pillar-card">
+        <span class="pillar-num">02</span>
+        <b>Quality First</b>
+        <small>We maintain high standards for all properties, ensuring you get the best value.</small>
+      </div>
+      <div class="journey-item pillar-card">
+        <span class="pillar-num">03</span>
+        <b>Family Focused</b>
+        <small>Find homes that perfectly match your family needs and lifestyle preferences.</small>
+      </div>
+    </div>
   </div>
 
   <div class="capability-hint">
@@ -141,7 +406,7 @@
 </section>
 
 <section class="audiences section">
-  <div class="eyebrow">04 / ONE PLATFORM • TWO WORLDS</div>
+  <div class="eyebrow">05 / ONE PLATFORM • TWO WORLDS</div>
   <h2 class="center-title">Built for the people<br>who <em>move real estate.</em></h2>
 
   <div class="audience-grid">
@@ -163,29 +428,35 @@
 
 <section class="impact section">
   <div class="impact-copy">
-    <div class="eyebrow">05 / OUTCOMES</div>
+    <div class="eyebrow">06 / OUTCOMES</div>
     <h2>Less complexity.<br><em>More possibility.</em></h2>
     <p>Better intelligence changes what people and businesses can do with real estate.</p>
   </div>
 
-  <div class="impact-list">
-    <div><span>01</span><strong>SMARTER DECISIONS</strong><small>Better information at the right moment.</small></div>
-    <div><span>02</span><strong>BETTER EFFICIENCY</strong><small>Less friction across everyday operations.</small></div>
-    <div><span>03</span><strong>GREATER TRANSPARENCY</strong><small>More context. Fewer unknowns.</small></div>
-    <div><span>04</span><strong>REAL-ESTATE GROWTH</strong><small>Turn intelligence into opportunity.</small></div>
-  </div>
-</section>
+  <div class="impact-cards-grid">
+    <div class="outcome-card">
+      <span class="outcome-num">01</span>
+      <strong>SMARTER DECISIONS</strong>
+      <small>Better information at the right moment.</small>
+    </div>
 
-<section class="trust section" id="about">
-  <div class="trust-left">
-    <div class="eyebrow">06 / TRUST</div>
-    <h2>Technology should make<br>things <em>clearer.</em></h2>
-  </div>
-  <div class="trust-right">
-    <div><b>01</b><strong>DATA-DRIVEN</strong><span>Better signals from better information.</span></div>
-    <div><b>02</b><strong>TRANSPARENT</strong><span>Clarity at every important step.</span></div>
-    <div><b>03</b><strong>HUMAN-FIRST</strong><span>Technology that simplifies decisions.</span></div>
-    <div><b>04</b><strong>OUTCOME-FOCUSED</strong><span>Value over unnecessary complexity.</span></div>
+    <div class="outcome-card">
+      <span class="outcome-num">02</span>
+      <strong>BETTER EFFICIENCY</strong>
+      <small>Less friction across everyday operations.</small>
+    </div>
+
+    <div class="outcome-card">
+      <span class="outcome-num">03</span>
+      <strong>GREATER TRANSPARENCY</strong>
+      <small>More context. Fewer unknowns.</small>
+    </div>
+
+    <div class="outcome-card">
+      <span class="outcome-num">04</span>
+      <strong>REAL-ESTATE GROWTH</strong>
+      <small>Turn intelligence into opportunity.</small>
+    </div>
   </div>
 </section>
 
