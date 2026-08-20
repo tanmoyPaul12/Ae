@@ -71,7 +71,7 @@ revealStyle.textContent = `
   .need-card,
   .process-step-card,
   .direct-comm-card,
-  .audience,
+  .audience-card,
   .outcome-card {
     opacity: 0;
     transform: translateY(22px);
@@ -90,7 +90,7 @@ revealStyle.textContent = `
     .need-card,
     .process-step-card,
     .direct-comm-card,
-    .audience,
+    .audience-card,
     .outcome-card {
       opacity: 1;
       transform: none;
@@ -101,7 +101,7 @@ revealStyle.textContent = `
 document.head.appendChild(revealStyle);
 
 document.querySelectorAll(
-  ".leader-stat-card, .listing-card, .journey-item, .need-card, .process-step-card, .direct-comm-card, .audience, .outcome-card"
+  ".leader-stat-card, .listing-card, .journey-item, .need-card, .process-step-card, .direct-comm-card, .audience-card, .outcome-card"
 ).forEach((element) => observer.observe(element));
 
 window.addEventListener("scroll", () => {

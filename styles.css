@@ -163,17 +163,22 @@ a{text-decoration:none;color:inherit}
 .capability-hint>span{background:#f5c84b;color:#182f4f;font-weight:800;padding:10px 12px;border-radius:50%}
 .capability-hint p{font-size:10px;color:#c0cad5;margin:0}
 
+/* MODERN B2B & B2C VISUAL CARDS */
 .audiences{background:#fff}
-.center-title{margin-bottom:40px}
-.audience-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.audience{background:#f8fafc;border:1px solid #e2e8f0;border-radius:20px;padding:36px 32px;position:relative;overflow:hidden;color:#182f4f;display:flex;flex-direction:column;justify-content:space-between;min-height:360px;transition:all 0.3s ease}
-.audience:hover{transform:translateY(-5px);border-color:#2563eb;box-shadow:0 20px 40px rgba(24,47,79,0.06)}
-.audience-tag{font-size:10px;letter-spacing:.2em;color:#2563eb;font-weight:800;background:#eff6ff;padding:4px 12px;border-radius:20px;width:fit-content;border:1px solid #bfdbfe}
-.audience h3{font:800 clamp(36px,4vw,52px)/.95 Manrope,sans-serif;letter-spacing:-.05em;margin:30px 0 16px;color:#182f4f}
-.audience h3 em{font-style:normal;color:#2563eb}
-.audience p{font-size:13px;color:#64748b;max-width:380px;line-height:1.6;margin:0}
-.audience-bottom{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
-.audience-bottom span{border:1px solid #cbd5e1;background:#fff;color:#475569;padding:6px 14px;border-radius:30px;font-size:9px;font-weight:700;letter-spacing:.1em}
+.audience-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1150px;margin:0 auto}
+.audience-card{background:#fff;border:1px solid #e2e8f0;border-radius:24px;padding:36px 30px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 10px 30px rgba(24,47,79,0.04);transition:all 0.35s ease;position:relative}
+.audience-card:hover{transform:translateY(-6px);border-color:#2563eb;box-shadow:0 20px 45px rgba(37,99,235,0.1)}
+.aud-card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+.aud-icon-box{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center}
+.b2b-icon{background:#eff6ff;color:#2563eb;border:1px solid #dbeafe}
+.b2c-icon{background:#fffbeb;color:#d97706;border:1px solid #fef3c7}
+.aud-badge{font-size:9px;font-weight:800;letter-spacing:.14em;color:#64748b;background:#f8fafc;border:1px solid #e2e8f0;padding:6px 14px;border-radius:20px}
+.aud-body h3{font:800 clamp(32px,3.8vw,46px)/1 Manrope,sans-serif;color:#0f172a;margin:0 0 10px 0;letter-spacing:-.04em}
+.aud-body h3 em{font-style:normal;color:#2563eb}
+.b2c-card .aud-body h3 em{color:#d97706}
+.aud-target-label{font-size:12px;font-weight:600;color:#64748b;display:block;margin-bottom:28px}
+.aud-visual-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}
+.aud-pill{background:#f8fafc;border:1px solid #e2e8f0;padding:8px 16px;border-radius:30px;font-size:11px;font-weight:700;color:#334155;display:inline-flex;align-items:center;gap:6px;box-shadow:0 2px 6px rgba(0,0,0,0.02)}
 
 .impact{background:#f8fafc;display:grid;grid-template-columns:.8fr 1.2fr;gap:6vw;align-items:center}
 .impact-copy p{max-width:380px;color:#64748b;line-height:1.7;font-size:15px}
@@ -196,20 +201,33 @@ a{text-decoration:none;color:inherit}
 footer{padding:28px 5vw;background:#182f4f;color:#aab8c7;display:flex;justify-content:space-between;align-items:center;font-size:9px}
 footer .brand{color:#fff}
 
+.property-swipe-hint{display:none}
+
 @media(max-width:1100px){
   .needs-grid{grid-template-columns:repeat(3,1fr)}
   .how-process-track{flex-direction:column;gap:30px}
   .process-connector{display:none}
 }
 @media(max-width:768px){
+  .impact{display:none !important}
+  .property-swipe-hint{display:block;font-size:11px;font-weight:700;color:#2563eb;margin-bottom:14px;letter-spacing:.03em}
   .swipe-hint{display:block}
   .needs-outer-container{padding:24px 16px;border-radius:18px}
+  .needs-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:350px;margin:0 auto 24px}
+  .needs-tabs .tab-btn{padding:10px 12px;font-size:11px;text-align:center;width:100%;justify-content:center}
   .needs-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:16px;-webkit-overflow-scrolling:touch}
   .need-card{min-width:82%;flex:0 0 82%;scroll-snap-align:center;padding:22px 18px}
-  .slider-card{flex:0 0 84%;min-width:280px}
+  .property-slider-track{gap:14px;padding-right:24px}
+  .slider-card{flex:0 0 76%;min-width:250px;max-width:300px;scroll-snap-align:start}
   .property-section-top{display:flex;flex-direction:row;justify-content:space-between;align-items:center;width:100%}
   .process-step-card{width:100%;padding:32px 20px}
   .impact-cards-grid{grid-template-columns:1fr;gap:12px}
+  .trust-stats-grid{grid-template-columns:repeat(2,1fr);gap:10px;max-width:340px;margin:18px auto 0}
+  .leader-stat-card{padding:14px 10px;border-radius:12px}
+  .leader-icon-box{width:34px;height:34px;border-radius:8px;margin-bottom:6px}
+  .leader-icon-box svg{width:16px;height:16px}
+  .leader-stat-num{font-size:18px;margin-bottom:2px}
+  .leader-stat-lbl{font-size:9px;line-height:1.2}
 }
 @media(max-width:900px){
   .desktop-nav,.outline-btn{display:none}
@@ -219,7 +237,6 @@ footer .brand{color:#fff}
   .why-pillars-grid{grid-template-columns:1fr}
   .direct-comm-card{flex-direction:column;align-items:flex-start;padding:30px}
   .audience-grid{grid-template-columns:1fr}
-  .trust-stats-grid{grid-template-columns:repeat(2,1fr);gap:16px}
   .mobile-menu.open{display:flex;position:fixed;top:76px;left:0;right:0;z-index:25;background:#fff;padding:25px 6vw;flex-direction:column;gap:20px;border-bottom:1px solid #e1e5ea}
   .mobile-menu.open a{font-size:13px}
 }
@@ -229,11 +246,6 @@ footer .brand{color:#fff}
   .hero h1{font-size:48px}
   .hero-right{height:390px}
   .hero-stat{left:10px}
-  .trust-stats-grid{grid-template-columns:repeat(2,1fr);gap:12px}
-  .leader-stat-card{padding:20px 14px;border-radius:14px}
-  .leader-icon-box{width:40px;height:40px;border-radius:12px;margin-bottom:10px}
-  .leader-stat-num{font-size:24px}
-  .leader-stat-lbl{font-size:10px}
   .section{padding:65px 5vw}
   .section-top{display:block}
   .section-top .simple-link{display:inline-block;margin-top:20px}
@@ -244,4 +256,5 @@ footer .brand{color:#fff}
   .contact{min-height:450px}
   footer{flex-direction:column;align-items:flex-start;gap:12px}
   .hero-mini{margin-top:35px}
+  .vision-copy{display:none}
 }
